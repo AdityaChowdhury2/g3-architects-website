@@ -1,0 +1,127 @@
+*{
+    font-family: 'Work Sans', sans-serif;
+    max-width: 1440px;
+    margin: 2px auto;
+}
+/* Common CSS */
+section{
+    margin-top: 100px;
+}
+.btn-primary{
+    font-size: 1.25rem;
+    border-radius: 8px;
+    background: #FF900E;
+    border: none;
+    color: #FFF;
+    cursor: pointer;
+    padding: 20px 24px;
+}
+/* Header Styles */
+header{
+    background-color: rgba(255, 144, 14, 0.10);
+    padding-bottom: 20px;
+}
+nav, ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul>li{
+    list-style: none;
+}
+nav .logo{
+    font-size: 3rem;
+    font-weight: 700px;
+    color:#131313;
+}
+
+ul>li {
+    padding: 0 20px;
+}
+
+ul> li>a{
+    font-size: 1.12rem;
+    text-decoration: none;
+    color: #424242;
+}
+
+/* Banner Styles */
+
+.banner-content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.banner-title{
+    color: #131313;
+    font-size: 4rem;
+    font-weight: 700;
+}
+.banner-description{
+    color: #727272;
+    line-height: 26px;
+}
+.banner-image{
+    margin: 20px;
+    text-align: center;
+
+}
+.banner-image img{
+    width: 80%;
+}
+/* Teams section styles */
+.teams-container{
+    display: flex;
+    align-items: center;
+    column-gap: 4.5rem;
+    /* padding: 0px 200px; */
+}
+.teams-gallery{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2,1fr);
+}
+
+
+/* For medium Screens  */
+@media screen and (max-width:764px) {
+    nav .logo{
+        font-size: 1.5rem;
+    }
+    ul> li>a{
+        font-size: 1.1rem;
+    }
+    nav, ul{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .banner-title{
+        font-size: 2.5rem;
+    }
+    nav>ul{
+        padding: 0;
+    }
+    .banner-content{
+        margin-top: -50px;
+        padding: 30px;
+    }
+}
+/* For Small Screen */
+@media screen and (max-width:578px){
+    nav .logo{
+        font-size: 1.2rem;
+    }
+    .banner-content{
+        padding: 10px;
+    }
+    .banner-title{
+        font-size: 2rem;
+    }
+    .banner-description{
+        font-size: 0.875rem;
+    }
+    .btn-primary{
+        font-size: 1rem;
+    }
+}
