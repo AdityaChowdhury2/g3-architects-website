@@ -1,15 +1,12 @@
 *{
     font-family: 'Work Sans', sans-serif;
-
 }
 main{
     max-width: 1440px;
-    margin: 2px auto;
+    margin: 70px auto;
 }
 /* Common CSS */
-section{
-    margin-top: 100px;
-}
+
 .text-gray{
     color:#727272;
 }
@@ -103,6 +100,14 @@ ul> li>a{
     line-height: 26px;
 }
 
+@media screen and (max-width:998px) {
+    .teams-container{
+        flex-direction: column;
+    }
+    .teams-content {
+        text-align: center;
+    }
+}
 
 /* For medium Screens  */
 @media screen and (max-width:764px) {
@@ -126,9 +131,8 @@ ul> li>a{
         margin-top: -50px;
         padding: 30px;
     }
-
-    .teams-container{
-        flex-direction: column;
+    .teams-description{
+        padding: 0 20px;
     }
 
 }
