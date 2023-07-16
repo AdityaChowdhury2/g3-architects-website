@@ -33,12 +33,16 @@ header{
 .title{
     font-weight: 700;
     font-size: 45px;
-
+    margin-bottom: 24px;
 }
 .description{
     line-height: 26px;
     font-size: 1rem;
 }
+.text-center{
+    text-align: center;
+}
+
 /* Header Styles */
 header{
     background-color: rgba(255, 144, 14, 0.10);
@@ -72,7 +76,6 @@ ul> li>a{
 
 .banner-content {
     max-width: 800px;
-    text-align: center;
     margin: 0 auto;
 }
 
@@ -82,8 +85,7 @@ ul> li>a{
 }
 
 .banner-image{
-    margin: 20px;
-    text-align: center;
+    margin-top: 1.25rem;
 
 }
 .banner-image img{
@@ -93,7 +95,7 @@ ul> li>a{
 /* Teams section styles */
 .teams-container{
     display: flex;
-    column-gap: 4.5rem;
+    column-gap: 3rem;
     align-items: center;
 }
 .teams-gallery{
@@ -111,16 +113,71 @@ ul> li>a{
     color: #FF900E;
 }
 
-/* Facts Section */
-.facts-content{
-    width: 37%;
+/* Features Section  */
+.feature{
+    display: flex;
+    gap: 3rem;
 }
+.feature-content h2{
+    padding-left: 20px;
+    border-left: 5px solid #FF900E;
+}
+.feature-content{
+    margin-bottom: 8px;
+}
+.left-features-container{
+    width: 40%;
+}
+
+.left-features-container .card{
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.feature-image-container{
+   
+}
+.feature-image-container img{
+    margin-left: 90px;
+    width: 90%;
+}
+.experience-badge {
+    position: relative;
+    border-radius: 8px;
+    background-color: #FF900E;
+    width: 342px;
+    color: #FFF;
+    text-align: center;
+    padding: 45px 42px;
+    bottom: 100px;
+}
+.experience-badge h1{
+    font-size: 65px;
+    margin: 0;
+    line-height: 70px;
+}
+.experience-badge p{
+    font-size: 25px;
+    margin: 0;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+/* Facts Section */
+.facts-content, .sponsor-content{
+    width: 38%;
+}
+.facts-content{
+    margin-bottom: 100px;
+}
+
 .facts-card-container {
     display: flex;
     justify-content: space-around;
 }
 .facts-card-container .card {
-    text-align: center;
     border-radius: 8px;
     border: 1px solid #FF900E;
     padding: 35px 35px 30px;
@@ -138,17 +195,75 @@ ul> li>a{
     margin-top: 10px;
 }
 
+/* Sponsor CSS */
+.sponsor-content{
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.sponsor-image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+.sponsor-image-container img{
+    width: 165px;
+}
 
 
-@media screen and (max-width:998px) {
+
+
+
+@media screen and (max-width:1200px){
+    .feature-image-container img{
+        margin-left: 0;
+    }
+    .left-features-container{
+        width: 50%;
+    }
+    .experience-badge{
+        width: 280px;
+
+    }
+    .feature{
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .facts-content,
+    .sponsor-content{
+        text-align: center;
+        width: auto;
+
+    }
     .logo h3{
         font-size: 2rem;
     }
-    .teams-container{
+    .teams-container,.facts-card-container,.sponsor-image-container, .feature {
         flex-direction: column;
     }
-    .teams-content {
+    .teams-content,.facts-card-container{
         text-align: center;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .feature{
+        align-items: center;
+
+    }
+    .left-features-container{
+        width: 100%;
+        
+    }
+    .left-features-container .card{
+        margin: 0 20px 20px;
+    }
+    .feature-image-container img{
+        margin-left: 92px;
+    }
+    .facts-card-container {
+        gap: 1.25rem;
     }
     .teams-title{
         width: auto;
@@ -166,7 +281,7 @@ ul> li>a{
     }
     nav, ul{
         flex-direction: column;
-        gap: 15px;
+        gap: 1rem;
     }
     .banner-title{
         font-size: 2.5rem;
@@ -176,16 +291,18 @@ ul> li>a{
     }
     .banner-content{
         margin-top: -50px;
-        padding: 30px;
+        padding: 1.875;
     }
 
     .teams-gallery div img{
         width: 100%;
     }
     .teams-description{
-        padding: 0 20px;
+        padding: 0 1.25rem;
     }
-
+    .feature-image-container img{
+        margin-left: 46px;
+    }
 
 }
 /* For Small Screen */
@@ -207,5 +324,11 @@ ul> li>a{
     }
     .teams-gallery{
         grid-template-columns: 1fr;
+    }
+    .feature-image-container img{
+        margin-left: 23px;
+    }
+    .experience-badge{
+        padding: 25px 15px;
     }
 }
