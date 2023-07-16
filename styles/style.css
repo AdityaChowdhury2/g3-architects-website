@@ -1,14 +1,22 @@
 *{
     font-family: 'Work Sans', sans-serif;
 }
-main{
+.container{
     max-width: 1440px;
-    margin: 70px auto;
+    margin: 10px auto;
 }
 /* Common CSS */
-
+section{
+    margin-bottom: 100px;
+}
+header{
+    margin-bottom: 50px;
+}
 .text-gray{
     color:#727272;
+}
+.text-black{
+    color:#131313;
 }
 .hide{
     display: none;
@@ -22,6 +30,15 @@ main{
     cursor: pointer;
     padding: 20px 24px;
 }
+.title{
+    font-weight: 700;
+    font-size: 45px;
+
+}
+.description{
+    line-height: 26px;
+    font-size: 1rem;
+}
 /* Header Styles */
 header{
     background-color: rgba(255, 144, 14, 0.10);
@@ -29,17 +46,16 @@ header{
 }
 nav, ul{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
 nav ul>li{
     list-style: none;
 }
-nav .logo{
+.logo h3{
     font-size: 3rem;
-    font-weight: 700px;
-    color:#131313;
+    font-weight: 700;
 }
 
 ul>li {
@@ -61,20 +77,18 @@ ul> li>a{
 }
 
 .banner-title{
-    color: #131313;
     font-size: 4rem;
     font-weight: 700;
 }
-.banner-description{
-    line-height: 26px;
-}
+
 .banner-image{
     margin: 20px;
     text-align: center;
 
 }
 .banner-image img{
-    width: 80%;
+    width: 100%;
+    
 }
 /* Teams section styles */
 .teams-container{
@@ -90,23 +104,46 @@ ul> li>a{
 .teams-title{
     width: 60%;
 }
-.text-features,.text-quick,.teams-content h2{
-    font-weight: 700;
-    font-size: 45px;
-}
 .text-quick{
     font-weight:500;
 }
 .text-features{
     color: #FF900E;
 }
-.teams-description{
-    font-size: 1rem;
-    line-height: 26px;
+
+/* Facts Section */
+.facts-content{
+    width: 37%;
+}
+.facts-card-container {
+    display: flex;
+    justify-content: space-around;
+}
+.facts-card-container .card {
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    padding: 35px 35px 30px;
+}
+.facts-card-container  .card .card-stats {
+    margin-top: 10px;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #424242;
+    margin-bottom: 10px;
+}
+.facts-card-container  .card .card-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 10px;
 }
 
 
+
 @media screen and (max-width:998px) {
+    .logo h3{
+        font-size: 2rem;
+    }
     .teams-container{
         flex-direction: column;
     }
