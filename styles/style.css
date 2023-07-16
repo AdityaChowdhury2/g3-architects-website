@@ -87,6 +87,9 @@ ul> li>a{
     gap: 1.5rem;
     grid-template-columns: repeat(2,1fr);
 }
+.teams-title{
+    width: 60%;
+}
 .text-features,.text-quick,.teams-content h2{
     font-weight: 700;
     font-size: 45px;
@@ -109,6 +112,9 @@ ul> li>a{
     }
     .teams-content {
         text-align: center;
+    }
+    .teams-title{
+        width: auto;
     }
 }
 
@@ -142,6 +148,7 @@ ul> li>a{
     .teams-description{
         padding: 0 20px;
     }
+
 
 }
 /* For Small Screen */
